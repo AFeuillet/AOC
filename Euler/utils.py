@@ -1,3 +1,7 @@
+from functools import reduce
+from math import sqrt
+
+
 def is_prime(n):
     if n==2 or n==3: return True
     if n%2==0 or n<2: return False
@@ -6,7 +10,7 @@ def is_prime(n):
             return False
     return True
 
-def ispalindrome(n):
+def is_palindrome(n):
     digits = [int(d) for d in str(n)]
     dlen = len(digits)
     for i in range(0, int(dlen/2)):
@@ -55,3 +59,14 @@ def prime_factors(n):
     if n > 1:
         factors.append(n)
     return factors
+
+def factors_simple(number):
+    nbd = 0
+    for j in range(1, int(number / 2) + 1):
+        if (number % j) == 0:
+            nbd += 1
+    return nbd + 1
+
+def factors_optimized(n):
+    step = 2 if n%2 else 1
+    return set(reduce(list.__add__, ([i, n//i] for i in range(1, int(sqrt(n))+1, step) if n % i == 0)))
