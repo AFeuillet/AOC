@@ -1,5 +1,4 @@
 # Coding Games
-Maybe not the best code but mine.
 
 ## AOC
 https://adventofcode.com/
