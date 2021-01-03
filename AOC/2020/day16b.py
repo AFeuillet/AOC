@@ -1,8 +1,3 @@
-from os import system
-from time import sleep
-import re
-import pdb
-
 nfile = open('data/day16.txt', 'r')
 nbl = nfile.read().split('\n\n')
 rulines = nbl[0].split('\n')
