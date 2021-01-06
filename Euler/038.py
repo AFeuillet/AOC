@@ -1,9 +1,9 @@
 from utils import *
 
+
 maxp = 0
 def pandmul(nb):
 	stri = ''
-	#import pdb;pdb.set_trace()
 	for j in range(1, 9):
 		stri += str(nb * j)
 		if len(stri) > 9:
