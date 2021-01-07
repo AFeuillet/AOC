@@ -30,6 +30,13 @@ def is_pandigital(n):
             return False
     return True    
 
+def is_pandigital2(n):
+    a = [int(d) for d in str(n)]
+    a.sort()
+    if a[0] != 0 and a == range(1, len(a) + 1):
+        return True
+    return False    
+
 def to_digit(n):
     return [int(d) for d in str(n)]
 
