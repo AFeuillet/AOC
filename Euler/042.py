@@ -1,9 +1,7 @@
 maxnb = 26
-total = 0
-
-t = [0]
+triangles = [0]
 for i in range(1, maxnb + 1):
-    t.append(int((i * (i + 1)) / 2))
+    triangles.append(int((i * (i + 1)) / 2))
 
 def namesum(stro):
     subtotal = 0
@@ -14,7 +12,8 @@ def namesum(stro):
 nfile = open('data/042.txt', 'r')
 names = nfile.read().replace('"','').split(',')
 
+total = 0
 for name in names:
-    if namesum(name) in t:
+    if namesum(name) in triangles:
         total+=1
 print(total)
