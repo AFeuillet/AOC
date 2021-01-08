@@ -1,5 +1,4 @@
 from utils import *
-from collections import Counter 
 
 
 def prime_factors_bis(n):
