@@ -1,4 +1,4 @@
-nfile = open('data/day1.txt', 'r')
+nfile = open('data/day01.txt', 'r')
 nbs = nfile.read().split('\n')
 
 def dayOnea():
