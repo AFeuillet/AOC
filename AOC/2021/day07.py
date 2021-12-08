@@ -4,7 +4,7 @@ banc = [int(a) for a in nfile.read().split(',')]
 
 part = 2
 
-cheapest = 99999999
+cheapest = float('inf')
 the = -1
 for i in range(max(banc) + 1):
 	total = 0
