@@ -81,3 +81,10 @@ def factors_optimized(n):
 def load_data(name):
     nfile = open('data/' + name + '.txt', 'r')
     return nfile.read().split('\n')
+
+def totient(n):
+    primes = set(prime_factors(n))
+    tot = n
+    for prime in primes:
+        tot *= 1 - (1 / prime)
+    return int(tot)
