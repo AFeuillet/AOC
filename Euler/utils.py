@@ -10,6 +10,13 @@ def is_prime(n):
             return False
     return True
 
+def all_primes(n):
+    primes = []
+    for i in range(1, n):
+        if is_prime(i):
+            primes.append(i)
+    return primes
+
 def is_palindrome(n):
     digits = [int(d) for d in str(n)]
     dlen = len(digits)
@@ -36,6 +43,9 @@ def is_pandigital2(n):
     if a[0] != 0 and a == range(1, len(a) + 1):
         return True
     return False    
+
+def is_square(n):
+    return sqrt(n).is_integer()
 
 def to_digit(n):
     return [int(d) for d in str(n)]
