@@ -2,6 +2,13 @@ from functools import reduce
 from math import sqrt
 
 
+def all_primes(n):
+    primes = []
+    for i in range(1, n):
+        if is_prime(i):
+            primes.append(i)
+    return primes
+
 def is_prime(n):
     if n == 2 or n == 3: return True
     if n % 2 == 0 or n < 2: return False
@@ -9,13 +16,6 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-
-def all_primes(n):
-    primes = []
-    for i in range(1, n):
-        if is_prime(i):
-            primes.append(i)
-    return primes
 
 def is_palindrome(n):
     digits = [int(d) for d in str(n)]
@@ -46,6 +46,14 @@ def is_pandigital2(n):
 
 def is_square(n):
     return sqrt(n).is_integer()
+
+def is_pytha(a, b, c):
+    if a == b + c or b == a + c or c == b + a:
+        return True
+    return False
+
+def is_pytha2(a, b, c):
+    return a ** 2 == b ** 2 + c ** 2 or b ** 2 == a ** 2 + c ** 2 or c ** 2 == b ** 2 + a ** 2
 
 def to_digit(n):
     return [int(d) for d in str(n)]
