@@ -17,13 +17,6 @@ def totient_old(n):
 """
 
 # second method using Euler formula https://en.wikipedia.org/wiki/Euler%27s_totient_function
-def totient(n):
-	primes = set(prime_factors(n))
-	tot = n
-	for prime in primes:
-		tot *= 1 - (1 / prime)
-	return int(tot)
-
 for n in range(2, totm + 1):
 	toti = totient(n)
 	if (n / toti) < minratio and sorted(str(toti)) == sorted(str(n)):

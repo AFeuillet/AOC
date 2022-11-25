@@ -66,11 +66,14 @@ def proper_divisor(n):
     return a
 
 def proper_sum(n):
-    ar = proper_divisor(n)
-    intotal = 0
-    for a in ar:
-        intotal += a
-    return intotal
+    return sum(proper_divisor(n))
+
+def proper_sum2(n):
+    s = 0
+    for i in range(1, int(n / 2) + 1):
+        if (n % i == 0):
+            s += i
+    return s
 
 def prime_factors(n):
     i = 2
