@@ -88,15 +88,14 @@ for i in range(len(floors)):
 	getNext([-1, i], [0, i])
 	maxi = max(maxi, len(bim))
 	bim = {}
-for i in range(len(floors)):
 	getNext([len(floors), i], [len(floors) - 1, i])
 	maxi = max(maxi, len(bim))
 	bim = {}
+	
 for j in range(len(floors[0])):
 	getNext([j, -1], [j, 0])
 	maxi = max(maxi, len(bim))
 	bim = {}
-for j in range(len(floors[0])):
 	getNext([j, len(floors[0])], [j, len(floors[0]) - 1])
 	maxi = max(maxi, len(bim))
 	bim = {}
